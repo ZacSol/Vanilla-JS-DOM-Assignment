@@ -1,0 +1,22 @@
+
+a:link{
+    color:white;
+}
+a:visited{
+    color:white;
+}
+a:hover{
+    color:red;
+}
+a:active{
+    color:pink;
+}
+.container{
+    margin-left: 0px;
+}
+
+#siteNav{
+    height: 100vh;
+    color: white;
+    background-color: #343434;
+}
