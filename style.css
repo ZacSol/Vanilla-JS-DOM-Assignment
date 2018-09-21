@@ -1,3 +1,4 @@
+/* ELEMENT TAGS */
 
 a:link{
     color:white;
@@ -11,12 +12,28 @@ a:hover{
 a:active{
     color:pink;
 }
+
+
+
+/* CLASS TAGS */
 .container{
     margin-left: 0px;
 }
+.box{
+    border: solid 1px;
+    padding-left: 5px;
+    margin:10px;
+}
 
+
+
+/* ID TAGS */
 #siteNav{
-    height: 100vh;
+    padding-top:200px;  
     color: white;
     background-color: #343434;
+}
+#addBar, #verifyBar, #upBar, #deleteBar{
+    display: none;
+    margin-top: 10px;
 }

@@ -76,3 +76,55 @@ const $ = function (selector) {
     val: val
   };
 }
+
+function makeBox(object){
+  let employee= 
+  `<div class='box'>
+    <p>Name: ${object.name}</p>
+    <p>Office #: ${object.officeNum}</p>
+    <p>Phone #: ${object.phoneNum}</p>
+  </div>`
+  return employee;
+  }
+
+  let myAdd=document.getElementById('addBar');
+  // console.log(myAdd);
+  let myUp=document.getElementById('upBar');
+  let myVerify=document.getElementById('verifyBar');
+  let myDel=document.getElementById('deleteBar');
+
+  function view(){
+    // console.log("clicked");
+    myAdd.style.display='none';
+    myUp.style.display='none';
+    myVerify.style.display='none';
+    myDel.style.display='none';
+  }
+  function add(){
+    // console.log("clicked");
+    myAdd.style.display='block';
+    myUp.style.display='none';
+    myVerify.style.display='none';
+    myDel.style.display='none';
+  }
+  function verify(){
+    // console.log("clicked");
+    myAdd.style.display='none';
+    myUp.style.display='none';
+    myVerify.style.display='block';
+    myDel.style.display='none';
+  }
+  function update(){
+    // console.log("clicked");
+    myAdd.style.display='none';
+    myUp.style.display='block';
+    myVerify.style.display='none';
+    myDel.style.display='none';
+  }
+  function deleteIt(){
+    // console.log("clicked");
+    myAdd.style.display='none';
+    myUp.style.display='none';
+    myVerify.style.display='none';
+    myDel.style.display='block';
+  }
