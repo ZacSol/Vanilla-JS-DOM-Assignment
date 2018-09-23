@@ -16,7 +16,6 @@ $('#addBtn').on('click',function(){
     // console.log(myPhone);
     employeeList.push({name: myName, officeNum: myNum, phoneNum: myPhone});
     // console.log(employeeList);
-    $("#content").empty();
     updateList();
 })
 
@@ -36,4 +35,26 @@ $("#verifyBtn").on('click',function(){
     else{
         alert(`${myName} is not currently here.`);
     }
+})
+
+$('#upBtn').on('click',function(){
+    // console.log("Update Clicked");
+    let myName=dataGrab('#updateName'), myNum=dataGrab('#updateNum'), myPhone=dataGrab("#updatePhone");
+    // console.log(myName,myNum,myPhone);
+    let answer=false, index=-1;
+    for(i=0;i<employeeList.length;i++){
+        // console.log(employeeList[i]);
+        if(employeeList[i].name===myName){
+            answer=true;
+            index=i;
+        }
+    }
+    // console.log(answer,index);
+    if(answer===false){
+        alert(`${myName} is not currently in this list.`);
+    }
+    else{
+        employeeList[index]={name:myName,officeNum:myNum,phoneNum:myPhone}
+    }
+    updateList();
 })

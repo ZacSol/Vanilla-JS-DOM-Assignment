@@ -129,14 +129,22 @@ function makeBox(object){
     myDel.style.display='block';
   }
 
+  function sentenceCase(string){
+    return string.charAt(0).toUpperCase() + string.slice(1);
+  }
+
 function dataGrab(inputId){
   const info=$(inputId).val();
-  return info;
+  
+  return sentenceCase(info);
 }
 
 function updateList(){
+  $("#content").empty();
   for(i=0;i<employeeList.length;i++){
       // console.log(employeeList[i]);
+      // $("#content").empty();
       $('#content').append(makeBox(employeeList[i]));
   }
 }
+
