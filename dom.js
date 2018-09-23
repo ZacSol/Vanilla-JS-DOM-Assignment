@@ -134,7 +134,6 @@ function dataGrab(inputId){
   return info;
 }
 
-
 function updateList(){
   for(i=0;i<employeeList.length;i++){
       // console.log(employeeList[i]);
