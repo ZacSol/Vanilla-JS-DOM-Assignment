@@ -93,12 +93,21 @@ function makeBox(object){
   let myVerify=document.getElementById('verifyBar');
   let myDel=document.getElementById('deleteBar');
 
+  function updateList(){
+    $("#content").empty();
+    for(i=0;i<employeeList.length;i++){
+        // console.log(employeeList[i]);
+        $('#content').append(makeBox(employeeList[i]));
+    }
+  }
+
   function view(){
     // console.log("clicked");
     myAdd.style.display='none';
     myVerify.style.display='none';
     myUp.style.display='none';
     myDel.style.display='none';
+    updateList();
   }
   function add(){
     // console.log("clicked");
@@ -139,12 +148,4 @@ function dataGrab(inputId){
   return sentenceCase(info);
 }
 
-function updateList(){
-  $("#content").empty();
-  for(i=0;i<employeeList.length;i++){
-      // console.log(employeeList[i]);
-      // $("#content").empty();
-      $('#content').append(makeBox(employeeList[i]));
-  }
-}
 

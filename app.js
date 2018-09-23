@@ -66,3 +66,23 @@ $('#upBtn').on('click',function(){
     }
     updateList();
 })
+
+$('#deleteBtn').on('click',function(){
+    // console.log("Delete clicked.");
+    let answer=false, index=-1, myName=dataGrab('#deleteName');
+    for(i=0;i<employeeList.length;i++){
+        // console.log(employeeList[i].name);
+        if(employeeList[i].name===myName){
+            answer=true;
+            index=i;
+        }
+    }
+    if(answer===false){
+        alert(`${myName} was not in this list.`);
+    }
+    else{
+    // console.log(employeeList[index]);
+    employeeList.splice(index,1);
+    updateList();
+    }
+})
