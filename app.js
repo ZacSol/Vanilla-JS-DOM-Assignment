@@ -54,7 +54,15 @@ $('#upBtn').on('click',function(){
         alert(`${myName} is not currently in this list.`);
     }
     else{
+        if(myPhone&&myNum){
         employeeList[index]={name:myName,officeNum:myNum,phoneNum:myPhone}
+        }
+        else if(myPhone){
+            employeeList[index].phoneNum=myPhone;
+        }
+        else if(myNum){
+            employeeList[index].officeNum=myNum;
+        }
     }
     updateList();
 })
