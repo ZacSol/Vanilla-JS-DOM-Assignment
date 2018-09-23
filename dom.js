@@ -96,35 +96,48 @@ function makeBox(object){
   function view(){
     // console.log("clicked");
     myAdd.style.display='none';
-    myUp.style.display='none';
     myVerify.style.display='none';
+    myUp.style.display='none';
     myDel.style.display='none';
   }
   function add(){
     // console.log("clicked");
     myAdd.style.display='block';
-    myUp.style.display='none';
     myVerify.style.display='none';
+    myUp.style.display='none';
     myDel.style.display='none';
   }
   function verify(){
     // console.log("clicked");
     myAdd.style.display='none';
-    myUp.style.display='none';
     myVerify.style.display='block';
+    myUp.style.display='none';
     myDel.style.display='none';
   }
   function update(){
     // console.log("clicked");
     myAdd.style.display='none';
-    myUp.style.display='block';
     myVerify.style.display='none';
+    myUp.style.display='block';
     myDel.style.display='none';
   }
   function deleteIt(){
     // console.log("clicked");
     myAdd.style.display='none';
-    myUp.style.display='none';
     myVerify.style.display='none';
+    myUp.style.display='none';
     myDel.style.display='block';
   }
+
+function dataGrab(inputId){
+  const info=$(inputId).val();
+  return info;
+}
+
+
+function updateList(){
+  for(i=0;i<employeeList.length;i++){
+      // console.log(employeeList[i]);
+      $('#content').append(makeBox(employeeList[i]));
+  }
+}

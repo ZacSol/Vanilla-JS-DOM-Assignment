@@ -29,25 +29,24 @@
         <!-- Adding bars go in this row -->
         <div class="row" id="addBar">
             <div class="input-group input-group-sm">
-                <input type="text" aria-label="Name" class="form-control" placeholder="Name">
-                <input type="text" aria-label="Office Number" class="form-control" placeholder="Office #">
-                <input type="text" aria-label="Phone Number" class="form-control" placeholder="Phone #">
+                <input type="text" class="form-control" placeholder="Name" id="nameIn">
+                <input type="text" class="form-control" placeholder="Office #" id="offNumIn">
+                <input type="text" class="form-control" placeholder="Phone #" id="phoneNumIn">
                 <div class="input-group-append">
-                  <button class="btn btn-outline-secondary" type="button" id="button-addon2">Add</button>
+                  <button class="btn btn-outline-secondary" type="button" id="addButton">Add</button>
                 </div>
               </div>
         </div>
-        <!-- Update Bar -->
         <div class="row" id="upBar">
-            <div class="input-group input-group-sm">
-                <input type="text" aria-label="Name" class="form-control" placeholder="Name">
-                <input type="text" aria-label="Office Number" class="form-control" placeholder="Office #">
-                <input type="text" aria-label="Phone Number" class="form-control" placeholder="Phone #">
-                <div class="input-group-append">
-                  <button class="btn btn-outline-secondary" type="button" id="button-addon2">Update</button>
-                </div>
+          <div class="input-group input-group-sm">
+              <input type="text" class="form-control" placeholder="Name" id="nameIn">
+              <input type="text" class="form-control" placeholder="Office #" id="offNumIn">
+              <input type="text" class="form-control" placeholder="Phone #" id="phoneNumIn">
+              <div class="input-group-append">
+                <button class="btn btn-outline-secondary" type="button" id="upButton">Update</button>
               </div>
-        </div>
+            </div>
+      </div>
         <!-- Verifying bar goes here -->
         <div class="row" id="verifyBar">
           <div class="col">
@@ -60,15 +59,15 @@
           </div>
       </div>
       <div class="row" id="deleteBar">
-          <div class="col">
-            <div class="input-group input-group-sm mb-3">
-              <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Enter Name">
-              <div class="input-group-append">
-                  <button class="btn btn-outline-secondary" type="button" id="button-addon2">Delete</button>
-                </div>
-            </div>
+        <div class="col">
+          <div class="input-group input-group-sm mb-3">
+            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Enter Name">
+            <div class="input-group-append">
+                <button class="btn btn-outline-secondary" type="button" id="button-addon2">Delete</button>
+              </div>
           </div>
-      </div>
+        </div>
+    </div>
       <!-- Meat and Potatoes -->
       <div class="row">
           <div class="col" id="content"></div>
