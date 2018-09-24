@@ -29,11 +29,14 @@ a:active{
 
 /* ID TAGS */
 #siteNav{
+    font-family: 'Fjalla One', sans-serif;
     padding-top:200px;  
     color: white;
     background-color: #343434;
+    font-size: 1.5rem;
 }
 #addBar, #verifyBar, #upBar, #deleteBar{
     display: none;
     margin-top: 10px;
+    margin-bottom:0px;
 }
