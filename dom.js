@@ -92,7 +92,7 @@ function makeBox(object){
   let myUp=document.getElementById('upBar');
   let myVerify=document.getElementById('verifyBar');
   let myDel=document.getElementById('deleteBar');
-
+  let myNav=$("#siteNav");
   function updateList(){
     $("#content").empty();
     for(i=0;i<employeeList.length;i++){
@@ -108,6 +108,8 @@ function makeBox(object){
     myUp.style.display='none';
     myDel.style.display='none';
     updateList();
+    myNav.removeClass("vHeight");
+
   }
   function add(){
     // console.log("clicked");
@@ -115,6 +117,8 @@ function makeBox(object){
     myVerify.style.display='none';
     myUp.style.display='none';
     myDel.style.display='none';
+    updateList();
+    myNav.removeClass("vHeight");
   }
   function verify(){
     // console.log("clicked");
@@ -122,6 +126,8 @@ function makeBox(object){
     myVerify.style.display='block';
     myUp.style.display='none';
     myDel.style.display='none';
+    $("#content").empty();
+    myNav.addClass("vHeight");
   }
   function update(){
     // console.log("clicked");
@@ -129,6 +135,8 @@ function makeBox(object){
     myVerify.style.display='none';
     myUp.style.display='block';
     myDel.style.display='none';
+    updateList();
+    myNav.removeClass("vHeight");
   }
   function deleteIt(){
     // console.log("clicked");
@@ -136,6 +144,8 @@ function makeBox(object){
     myVerify.style.display='none';
     myUp.style.display='none';
     myDel.style.display='block';
+    updateList();
+    myNav.removeClass("vHeight");
   }
 
   function sentenceCase(string){
@@ -144,7 +154,6 @@ function makeBox(object){
 
 function dataGrab(inputId){
   const info=$(inputId).val();
-  
   return sentenceCase(info);
 }
 

@@ -1,4 +1,3 @@
-
 updateList();
 
 $('#view').on('click',view);
@@ -11,9 +10,7 @@ $('#addBtn').on('click',function(){
     let myName=dataGrab('#addName');
     let myNum=dataGrab('#addNum');
     let myPhone=dataGrab("#addPhone");
-    // console.log(myName);
-    // console.log(myNum);
-    // console.log(myPhone);
+    // console.log(myName, myNum, myPhone);
     employeeList.push({name: myName, officeNum: myNum, phoneNum: myPhone});
     // console.log(employeeList);
     updateList();
